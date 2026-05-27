@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iSts0Vdybwc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\476849624\\Documents\\Gabriel Cavalheiro\\PROJETOS\\projeto_MonitoramentoIndustrial\\projeto_MonitoramentoIndustrial.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\476849624\\.nuget\\packages\\mqttnet\\5.1.0.1559\\mqttnet.5.1.0.1559.nupkg.sha512"
+  ],
+  "logs": []
+}

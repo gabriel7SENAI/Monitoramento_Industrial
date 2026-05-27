@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Monitoramento Industrial Simu</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="titulo">
+        <h1>Dashboard Industrial MQTT</h1>
+        <p>Monitoramento em tempo real</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Temperatura</h2>
+          <div class="valor" id="temperatura">--°C</div>
+        </div>
+
+        <div class="card">
+          <h2>Umidade</h2>
+          <div class="valor" id="umidade">--%</div>
+        </div>
+
+        <div class="card">
+          <h2>Vibração</h2>
+          <div class="valor" id="vibracao">--</div>
+          <div class="status" id="statusVibracao">Aguardando...</div>
+        </div>
+
+        <div class="card">
+          <h2>Status da Máquina</h2>
+          <div class="valor" id="statusMaquina">--</div>
+        </div>
+
+        <div class="card">
+          <h2>Status MQTT</h2>
+          <div class="valor offline" id="statusBroker">Offline</div>
+        </div>
+      </div>
+
+      <div class="footer">Dados recebidos via MQTT HiveMQ</div>
+    </div>
+
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
