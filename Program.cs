@@ -12,6 +12,8 @@ Console.WriteLine("Conectando back...");
 await client.ConnectAsync(options);
 Console.WriteLine("Conectado!");
 
+await client.SubscribeAsync("gabriel/industria/comando");
+
 client.DisconnectedAsync += async e =>
   {
       Console.WriteLine("Desconectado");
@@ -35,7 +37,7 @@ client.DisconnectedAsync += async e =>
 Random random = new Random();
 while (true)
 {
-    double temperatura = random.NextDouble() * (20 - 18) + 18;
+    double temperatura = random.NextDouble() * (45 - 35) + 35;
 
     double umidade = random.NextDouble() * (80 - 40) + 40;
 
@@ -54,22 +56,27 @@ while (true)
 
     var statusMsg = new MqttApplicationMessageBuilder()
         .WithTopic("gabriel/industria/status")
-        .WithPayload($"Status da máquina: {statusMaquina}")
+        .WithPayload($"{statusMaquina}")
         .Build();
 
     var vibracaoMsg = new MqttApplicationMessageBuilder()
-        .WithTopic("gabriel/industria/vibracao")
-        .WithPayload($"Vibração: {vibracao:F0} --> {statusVibracao}")
+        .WithTopic("gabriel/industria/vibracao/valor")
+        .WithPayload($"{vibracao:F0}")
+        .Build();
+
+    var vibracaoStatusMsg = new MqttApplicationMessageBuilder()
+        .WithTopic("gabriel/industria/vibracao/status")
+        .WithPayload($"{statusVibracao}")
         .Build();
 
     var temperaturaMsg = new MqttApplicationMessageBuilder()
         .WithTopic("gabriel/industria/temperatura")
-        .WithPayload($"Temperatura: {temperatura:F2}°C")
+        .WithPayload($"{temperatura:F2}°C")
         .Build();
 
     var umidadeMsg = new MqttApplicationMessageBuilder()
         .WithTopic("gabriel/industria/umidade")
-        .WithPayload($"Umidade: {umidade:F0}%")
+        .WithPayload($"{umidade:F0}%")
         .Build();
 
 
@@ -77,6 +84,9 @@ while (true)
     await Task.Delay(50);
 
     await client.PublishAsync(vibracaoMsg);
+    await Task.Delay(50);
+
+    await client.PublishAsync(vibracaoStatusMsg);
     await Task.Delay(50);
 
     await client.PublishAsync(temperaturaMsg);
@@ -89,10 +99,11 @@ while (true)
 
     Console.WriteLine($@"Dados publicados:
 
+Status da máquina: {statusMaquina}
+Vibração: {vibracao:F0}
+Vibração Status: {statusVibracao}
 Temperatura: {temperatura:F2}°C
 Umidade: {umidade:F0}%
-Vibração: {vibracao:F0} => {statusVibracao}
-Status da máquina: {statusMaquina}");
-
+");
     await Task.Delay(5000);
 }
