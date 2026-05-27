@@ -16,3 +16,21 @@ C:\Users\476849624\Documents\Gabriel Cavalheiro\PROJETOS\projeto_MonitoramentoIn
 C:\Users\476849624\Documents\Gabriel Cavalheiro\PROJETOS\projeto_MonitoramentoIndustrial\obj\Debug\net8.0\projeto_MonitoramentoIndustrial.pdb
 C:\Users\476849624\Documents\Gabriel Cavalheiro\PROJETOS\projeto_MonitoramentoIndustrial\obj\Debug\net8.0\projeto_MonitoramentoIndustrial.genruntimeconfig.cache
 C:\Users\476849624\Documents\Gabriel Cavalheiro\PROJETOS\projeto_MonitoramentoIndustrial\obj\Debug\net8.0\ref\projeto_MonitoramentoIndustrial.dll
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\bin\Debug\net8.0\projeto_MonitoramentoIndustrial.exe
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\bin\Debug\net8.0\projeto_MonitoramentoIndustrial.deps.json
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\bin\Debug\net8.0\projeto_MonitoramentoIndustrial.runtimeconfig.json
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\bin\Debug\net8.0\projeto_MonitoramentoIndustrial.dll
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\bin\Debug\net8.0\projeto_MonitoramentoIndustrial.pdb
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\bin\Debug\net8.0\MQTTnet.dll
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\projeto_MonitoramentoIndustrial.csproj.AssemblyReference.cache
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\projeto_MonitoramentoIndustrial.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\projeto_MonitoramentoIndustrial.AssemblyInfoInputs.cache
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\projeto_MonitoramentoIndustrial.AssemblyInfo.cs
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\projeto_MonitoramentoIndustrial.csproj.CoreCompileInputs.cache
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\projeto_MonitoramentoIndustrial.sourcelink.json
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\projeto_.D952C3CE.Up2Date
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\projeto_MonitoramentoIndustrial.dll
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\refint\projeto_MonitoramentoIndustrial.dll
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\projeto_MonitoramentoIndustrial.pdb
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\projeto_MonitoramentoIndustrial.genruntimeconfig.cache
+C:\Users\vinic\OneDrive\Documentos\Gabriel\MQTT\monitoramento-industrial-MQTT\Monitoramento_Industrial\obj\Debug\net8.0\ref\projeto_MonitoramentoIndustrial.dll

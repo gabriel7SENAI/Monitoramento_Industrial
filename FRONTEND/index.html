@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Industrial MQTT</title>
+
     <link rel="stylesheet" href="style.css" />
-    <title>Monitoramento Industrial Simu</title>
+
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
+
   <body>
     <div class="container">
       <div class="titulo">
@@ -13,40 +18,47 @@
         <p>Monitoramento em tempo real</p>
       </div>
 
+      <div id="statusBroker" class="status offline">Offline</div>
+
       <div class="grid">
         <div class="card">
           <h2>Temperatura</h2>
-          <div class="valor" id="temperatura">--°C</div>
+          <div id="temperatura" class="valor">--</div>
         </div>
 
         <div class="card">
           <h2>Umidade</h2>
-          <div class="valor" id="umidade">--%</div>
+          <div id="umidade" class="valor">--</div>
         </div>
 
         <div class="card">
           <h2>Vibração</h2>
-          <div class="valor" id="vibracao">--</div>
-          <div class="status" id="statusVibracao">Aguardando...</div>
+          <div id="vibracao" class="valor">--</div>
+          <div id="statusVibracao" class="status">--</div>
         </div>
 
         <div class="card">
-          <h2>Status da Máquina</h2>
-          <div class="valor" id="statusMaquina">--</div>
-        </div>
-
-        <div class="card">
-          <h2>Status MQTT</h2>
-          <div class="valor offline" id="statusBroker">Offline</div>
+          <h2>Status Máquina</h2>
+          <div id="statusMaquina" class="valor">--</div>
         </div>
       </div>
 
-      <div class="footer">Dados recebidos via MQTT HiveMQ</div>
+      <div class="card">
+        <h2>Histórico de Temperatura</h2>
+        <canvas id="chartTemp"></canvas>
+      </div>
 
-      <button id="btnDesligar">Desligar</button>
+      <button id="btnEstado">Ligar</button>
     </div>
 
-    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
-    <script type="module" src="main.js"></script>
+    <div id="alerta" class="alerta hidden"></div>
+
+    <div class="footer">
+      Dados recebidos via MQTT HiveMQ
+      <br />
+      <span id="lastUpdate">Última atualização: --</span>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>

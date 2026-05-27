@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "iSts0Vdybwc=",
+  "dgSpecHash": "TdfimjI4b5c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\476849624\\Documents\\Gabriel Cavalheiro\\PROJETOS\\projeto_MonitoramentoIndustrial\\projeto_MonitoramentoIndustrial.csproj",
+  "projectFilePath": "C:\\Users\\vinic\\OneDrive\\Documentos\\Gabriel\\MQTT\\monitoramento-industrial-MQTT\\Monitoramento_Industrial\\projeto_MonitoramentoIndustrial.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\476849624\\.nuget\\packages\\mqttnet\\5.1.0.1559\\mqttnet.5.1.0.1559.nupkg.sha512"
+    "C:\\Users\\vinic\\.nuget\\packages\\mqttnet\\5.1.0.1559\\mqttnet.5.1.0.1559.nupkg.sha512",
+    "C:\\Users\\vinic\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.24\\microsoft.aspnetcore.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\vinic\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.24\\microsoft.netcore.app.host.win-x64.8.0.24.nupkg.sha512",
+    "C:\\Users\\vinic\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.24\\microsoft.netcore.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\vinic\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.24\\microsoft.windowsdesktop.app.ref.8.0.24.nupkg.sha512"
   ],
   "logs": []
 }

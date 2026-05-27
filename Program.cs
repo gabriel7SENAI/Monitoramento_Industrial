@@ -1,18 +1,47 @@
-﻿using MQTTnet;
+﻿using System.Text;
+using MQTTnet;
+
 Console.Clear();
 
 var factory = new MqttClientFactory();
 var client = factory.CreateMqttClient();
 
+bool maquinaLigada = false;
+
 var options = new MqttClientOptionsBuilder()
     .WithTcpServer("broker.hivemq.com")
     .Build();
 
+
+client.ApplicationMessageReceivedAsync += e =>
+{
+    string msg = Encoding.UTF8.GetString(
+        e.ApplicationMessage.Payload
+    );
+
+    if (msg == "ON")
+    {
+        maquinaLigada = true;
+    }
+    else if (msg == "OFF")
+    {
+        maquinaLigada = false;
+    }
+
+    return Task.CompletedTask;
+};
+
+
 Console.WriteLine("Conectando back...");
+client.ConnectedAsync += async e =>
+{
+    Console.WriteLine("Reconectado / Conectado");
+
+    await client.SubscribeAsync("gabriel/industria/comando");
+};
 await client.ConnectAsync(options);
 Console.WriteLine("Conectado!");
 
-await client.SubscribeAsync("gabriel/industria/comando");
 
 client.DisconnectedAsync += async e =>
   {
@@ -33,7 +62,6 @@ client.DisconnectedAsync += async e =>
       }
   };
 
-
 Random random = new Random();
 while (true)
 {
@@ -42,9 +70,7 @@ while (true)
     double umidade = random.NextDouble() * (80 - 40) + 40;
 
     double vibracao = random.NextDouble() * 10;
-    string statusVibracao = vibracao == 0 ? "Parada" : vibracao >= 7 ? "Vibrando muito" : "Vibração normal";
 
-    bool maquinaLigada = true;
     string statusMaquina = maquinaLigada ? "ON" : "OFF";
 
     if (!maquinaLigada)
@@ -64,11 +90,6 @@ while (true)
         .WithPayload($"{vibracao:F0}")
         .Build();
 
-    var vibracaoStatusMsg = new MqttApplicationMessageBuilder()
-        .WithTopic("gabriel/industria/vibracao/status")
-        .WithPayload($"{statusVibracao}")
-        .Build();
-
     var temperaturaMsg = new MqttApplicationMessageBuilder()
         .WithTopic("gabriel/industria/temperatura")
         .WithPayload($"{temperatura:F2}°C")
@@ -86,9 +107,6 @@ while (true)
     await client.PublishAsync(vibracaoMsg);
     await Task.Delay(50);
 
-    await client.PublishAsync(vibracaoStatusMsg);
-    await Task.Delay(50);
-
     await client.PublishAsync(temperaturaMsg);
     await Task.Delay(50);
 
@@ -101,7 +119,6 @@ while (true)
 
 Status da máquina: {statusMaquina}
 Vibração: {vibracao:F0}
-Vibração Status: {statusVibracao}
 Temperatura: {temperatura:F2}°C
 Umidade: {umidade:F0}%
 ");
